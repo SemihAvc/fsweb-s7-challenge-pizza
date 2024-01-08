@@ -1,10 +1,26 @@
 import React from "react";
+import HomePage from "./pages/HomePage";
+import Order from "./pages/Order";
+import SiparisinizAlindi from "./pages/SiparisinizAlindi";
+import { Switch, Route, Link, BrowserRouter as Router } from "react-router-dom";
 
-const App = () => {
+function App() {
   return (
     <>
-      <h1>Teknolojik Yemekler</h1>
-      <p>Burdaki kodu silip kendi headerınızı ekleyebilirsiniz</p>
+      <Router>
+      <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route exact path="/order">
+            <Order />
+          </Route>
+          <Route exact path="/SiparisinizAlindi">
+            <SiparisinizAlindi />
+          </Route>
+        </Switch>
+      </Router>
+
     </>
   );
 };
