@@ -6,4 +6,4 @@ function SiparisinizAlindi() {
   )
 }
 
-export default SiparisinizAlindi
+export default SiparisinizAlindi;
