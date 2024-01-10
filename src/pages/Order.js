@@ -6,7 +6,6 @@ import axios from "axios"
 import { useHistory } from "react-router-dom";
 
 const initialForm = {
-  isim: "",
   size:"",
   hamur:"",
   malzeme:[],
@@ -23,7 +22,6 @@ const history= useHistory();
 
 const isOrderValid = () => {
   return (
-    form.isim.lengt > 2 &&
       form.size !== '' &&
       form.hamur !== '' &&
       form.malzeme.length >= 4 &&
@@ -50,8 +48,7 @@ if (checked) {
  } else {
       setForm({...form,malzeme: form.malzeme.filter((index) => index !== value),});
  }
-  }else if(name==="not" || name==="isim" ){
-  
+  }else if(name==="not"){
     setForm({ ...form, not: value });
   }
  };
@@ -177,8 +174,6 @@ const handleSubmit = (event) => {
 
 </div>
 <div class="footer">
-<label for="isimAlani" >Adınız:</label>
-<input id="isimAlani" placeholder = "Adınız..."/>
 <p class="siparis-notu">Sipariş Notu</p>
 <div>
   <textarea name="not" id="not" cols="70" rows="3" value={form.not} onChange={handleChange}
