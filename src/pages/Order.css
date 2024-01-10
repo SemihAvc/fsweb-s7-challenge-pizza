@@ -118,3 +118,6 @@ flex-direction: column;
 .siparis-toplam h3{
     padding-left: 70px;
 }
+.bar a {
+text-decoration: none;
+}
